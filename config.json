@@ -1,127 +1,197 @@
 {
   "instructions": [
     "<p>",
-    "Fill out the form below, and click <b>Send</b> to submit it.",
-    "If that should fail, simply click <b>Download Form</b> and manually",
-    "email the completed form to:",
-    "<strong class='email-placeholder'>[Email Address]</strong>.",
+    "欢迎使用晨晨房产中介。",
+    "这里是<b>售房</b>联系表格，如果你想买房，请点击",
+    "<a href='https://grandragonrealty/buyer_contact/' target='_blank'>",
+    "买房联系表",
+    "</a>。",
+    "请填写以下信息, 并点击最后<b>提交</b>按钮。",
     "</p>"
   ],
-  "subject": "Your Form Subject",
-  "title": "Your Custom Title",
-  "send_button_text": "Custom Submit Text",
-  "download_button_text": "Custom Download Text",
-  "missing_field_message": "Custom Missing Field Alert Message",
-  "enable_form_download": true,
-  "form_backend_url": null,
+  "subject": "Seller Contact Form",
+  "title": "Seller Contact Form",
+  "send_button_text": "提交",
+  "download_button_text": "下载",
+  "missing_field_message": "请回答这个问题",
+  "enable_form_download": false,
+  "form_backend_url": "https://formspree.io/f/mayrzjka",
   "ignore_file_upload": true,
-  "email": "your_email@example.com",
+  "email": "ms.chenchen@outlook.com",
   "questions": [
     {
-      "label": "Upload funny memes",
-      "name": "meme_imgs",
-      "type": "file",
-      "required": true,
-      "custom": {
-        "multiple": true
-      }
-    },
-    {
-      "label": [
-          "This is a multiline label. It is intended to make it easier to write",
-          "multiline questions and include <i>interesting</i>",
-          "<a href='https://developer.mozilla.org/en-US/docs/Web/HTML'",
-          "target='_blank'>HTML Syntax</a>",
-          "directly in your <i>question text</i>"
-      ],
-      "name": "multiline_html_question",
-      "type": "text",
-      "required": false
-    },
-    {
-      "label": "Select your favorite color",
-      "name": "favorite_color",
+      "label": "* 请确认你是售房还是买房",
+      "name": "sell_or_buy",
       "type": "selectbox",
       "required": true,
       "options": [
-        {
-          "label": "--Choose your favorite color(s)--",
-          "value": "",
-          "selected": true,
-          "disabled": true
-        },
-        {"label": "Red", "value": "red"},
-        {"label": "Blue", "value": "blue"},
-        {"label": "Green", "value": "green"},
-        {"label": "Yellow", "value": "yellow"},
-        {"label": "Purple", "value": "purple"},
-        {"label": "Orange", "value": "orange"},
-        {"label": "Pink", "value": "pink"},
-        {"label": "Black", "value": "black"},
-        {"label": "White", "value": "white"}
+        {"label": "售房", "value": "seller"},
+        {"label": "买房", "value": "buyer"}
       ],
       "custom": {
-        "multiple": true
+        "multiple": false
       }
     },
     {
-      "label": "имя (Name)",
+      "label": " * 姓名",
       "name": "name",
       "type": "text",
       "required": true
     },
     {
-      "label": "ایمیل (Email)",
-      "name": "email",
-      "type": "email",
-      "required": true
-    },
-    {
-      "label": "Telephone Number (Optional)",
-      "name": "telephone",
-      "type": "tel",
-      "required": false
-    },
-    {
-      "label": "Age",
-      "name": "age",
+      "label": "* 电话",
+      "name": "tel",
       "type": "number",
       "required": true
     },
     {
-      "label": "Appointment Date/Time",
-      "name": "apt_time",
-      "type": "datetime-local",
+      "label": " * 微信号",
+      "name": "wechat",
+      "type": "text",
       "required": true
     },
     {
-      "label": "在历史上的军事战争中，你认为最关键的战略决策是什么",
-      "name": "chinese_question",
-      "type": "textarea",
+      "label": " * 出售房子所在小区名称",
+      "name": "neighborhood_name",
+      "type": "text",
       "required": true
     },
     {
-      "label": "Website",
-      "name": "site_url",
-      "type": "url",
+      "label": " * 出售房子所在城市",
+      "name": "city",
+      "type": "text",
       "required": true
     },
     {
-      "label": "Select your country",
-      "name": "country",
+      "label": "* 价格",
+      "name": "price",
+      "type": "number",
+      "required": true
+    },
+    {
+      "label": "* 是否接受议价",
+      "name": "accept_negotiation",
+      "type": "selectbox",
+      "required": true,
+      "options": [
+        {"label": "接受", "value": "yes"},
+        {"label": "不接受", "value": "no"}
+      ],
+      "custom": {
+        "multiple": false
+      }
+    },
+    {
+      "label": "* 面积",
+      "name": "area",
+      "type": "number",
+      "required": true
+    },
+    {
+      "label": "* 楼层",
+      "name": "floor",
+      "type": "number",
+      "required": true
+    },
+    {
+      "label": "* 几个卧室",
+      "name": "bedroom",
+      "type": "selectbox",
+      "required": true,
+      "options": [
+        {"label": "1室", "value": "1"},
+        {"label": "2室", "value": "2"},
+        {"label": "3室", "value": "3"},
+        {"label": "4室", "value": "4"}
+      ],
+      "custom": {
+        "multiple": false
+      }
+    },
+    {
+      "label": "* 朝向",
+      "name": "direction",
+      "type": "selectbox",
+      "required": true,
+      "options": [
+        {"label": "南北通透", "value": "south_north"},
+        {"label": "双阳", "value": "double_south"}
+      ],
+      "custom": {
+        "multiple": false
+      }
+    },
+    {
+      "label": "* 你要出售的房子有房产证，可以过户吗？",
+      "name": "deed",
+      "type": "selectbox",
+      "required": true,
+      "options": [
+        {"label": "有", "value": "yes"},
+        {"label": "没有", "value": "no"},
+        {"label": "不确定", "value": "not_sure"}
+      ],
+      "custom": {
+        "multiple": false
+      }
+    },
+    {
+      "label": "* 您是否可以在微信上提供房产证照片以证明房子为您所有？",
+      "name": "deed_pic",
+      "type": "selectbox",
+      "required": true,
+      "options": [
+        {"label": "可以", "value": "yes"},
+        {"label": "不可以", "value": "no"}
+      ],
+      "custom": {
+        "multiple": false
+      }
+    },
+    {
+      "label": "* 您是否可以在微信上提供房子的照片或视频？",
+      "name": "property_video",
+      "type": "selectbox",
+      "required": true,
+      "options": [
+        {"label": "可以", "value": "yes"},
+        {"label": "不可以", "value": "no"}
+      ],
+      "custom": {
+        "multiple": false
+      }
+    },
+    {
+      "label": "* 您是否同意我们将您房子的照片或视频发布到网络平台帮您出售？",
+      "name": "post_property_video",
+      "type": "selectbox",
+      "required": true,
+      "options": [
+        {"label": "可以", "value": "yes"},
+        {"label": "不可以", "value": "no"}
+      ],
+      "custom": {
+        "multiple": false
+      }
+    },
+
+    {
+      "label": "* 你是从哪里了解到我们的",
+      "name": "Platform",
       "type": "selectbox",
       "required": true,
       "options": [
         {
-          "label": "--Select all that apply--",
+          "label": "选择所有适用的选项",
           "value": "",
           "selected": true,
           "disabled": true
         },
-        {"label": "USA", "value": "USA"},
-        {"label": "Canada", "value": "CAN"},
-        {"label": "United Kingdom", "value": "UK"},
-        {"label": "Australia", "value": "AUS"}
+        {"label": "小红书", "value": "red_book"},
+        {"label": "B站", "value": "bilibili"},
+        {"label": "小区广告", "value": "flyer"},
+        {"label": "朋友或家人介绍", "value": "f&f"},
+        {"label": "其他", "value": "other"}
       ],
       "custom": {
         "multiple": true
